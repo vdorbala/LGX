@@ -6,7 +6,7 @@ Vishnu Sashank Dorbala, James F. Mullen Jr., Dinesh Manocha
 
 ## Overview
 
-<img src="https://www.github.com/lgx/images/lgx.png">
+<img src="https://github.com/vdorbala/LGX/blob/master/images/lgx.png">
 
 ## Abstract
 *We present LGX, a novel algorithm for Object
@@ -68,7 +68,7 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
  5. Once the experiment is done, you can get statistics and results using `compute_results.py`.
 
  If everything runs successfully, you should see the results folder getting populated, and rviz showing the map and pointcloud similar to the image below.
- <img src="https://www.github.com/lgx/images/example_costmap.png">
+ <img src="https://github.com/vdorbala/LGX/blob/master/images/example_costmap.png">
 
  ## Useful Commands, Tips & Debugging Info
 
