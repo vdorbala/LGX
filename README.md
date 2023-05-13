@@ -6,7 +6,7 @@ Vishnu Sashank Dorbala, James F. Mullen Jr., Dinesh Manocha
 
 ## Overview
 
-<img src="https://github.com/vdorbala/LGX/blob/master/images/overview.png">
+<img src="https://github.com/vdorbala/LGX/blob/master/images/overview.jpg">
 
 ## Abstract
 *We present LGX, a novel algorithm for Object
