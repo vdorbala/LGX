@@ -1,8 +1,0 @@
-prefix=/home/vdorbala/catkin_ws/install
-
-Name: tf2_ros
-Description: Description of tf2_ros
-Version: 0.6.5
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -ltf2_ros
-Requires: actionlib actionlib_msgs geometry_msgs message_filters roscpp rosgraph tf2 tf2_msgs tf2_py

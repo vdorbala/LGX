@@ -1,1 +1,0 @@
-/home/vdorbala/catkin_ws/devel/.private/tf2_msgs/lib/pkgconfig/tf2_msgs.pc

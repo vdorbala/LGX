@@ -1,1 +1,0 @@
-/home/vdorbala/catkin_ws/devel/.private/tf2_bullet/lib/pkgconfig/tf2_bullet.pc

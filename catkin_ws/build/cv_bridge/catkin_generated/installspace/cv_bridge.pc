@@ -1,8 +1,0 @@
-prefix=/home/vdorbala/catkin_ws/install
-
-Name: cv_bridge
-Description: Description of cv_bridge
-Version: 1.13.1
-Cflags: -I${prefix}/include -I/usr/include -I/usr/include/opencv
-Libs: -L${prefix}/lib -lcv_bridge /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
-Requires: rosconsole sensor_msgs

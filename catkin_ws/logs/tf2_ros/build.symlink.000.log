@@ -1,7 +1,0 @@
-Symlinking /home/vdorbala/catkin_ws/devel/lib/libtf2_ros.so
-Symlinking /home/vdorbala/catkin_ws/devel/lib/pkgconfig/tf2_ros.pc
-Symlinking /home/vdorbala/catkin_ws/devel/lib/python3/dist-packages/tf2_ros/__init__.py
-Symlinking /home/vdorbala/catkin_ws/devel/lib/tf2_ros/buffer_server
-Symlinking /home/vdorbala/catkin_ws/devel/lib/tf2_ros/static_transform_publisher
-Symlinking /home/vdorbala/catkin_ws/devel/share/tf2_ros/cmake/tf2_rosConfig-version.cmake
-Symlinking /home/vdorbala/catkin_ws/devel/share/tf2_ros/cmake/tf2_rosConfig.cmake

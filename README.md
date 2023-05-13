@@ -57,7 +57,6 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
  6. Then download the melodic/noetic/yourversion branch of the `vision-opencv` package ([here](https://github.com/ros-perception/vision_opencv)) in the catkin src folder, and build that using `catkin build`.
  7. Finally, after building everything, ensure that your catkin workspace is sourced in the .bashrc file AFTER the ROS source. Echoing the `$CMAKE_PREFIX_PATH` should look something like - `/home/user/catkin_ws/devel:/opt/ros/melodic`.
  8. If all these steps have been followed correctly, after opening up a python3.8 terminal, running `import tf2_ros` and `from cv_bridge.boost.cv_bridge_boost import getCvType` should return no errors.
- 9. Alternatively, you could use the `catkin_ws` folder provided in the repo and source it accordingly.
  
  ### Inference & Results
 

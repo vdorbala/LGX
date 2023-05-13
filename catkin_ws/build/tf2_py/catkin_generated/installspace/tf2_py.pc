@@ -1,8 +1,0 @@
-prefix=/home/vdorbala/catkin_ws/install
-
-Name: tf2_py
-Description: Description of tf2_py
-Version: 0.6.5
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: rospy tf2

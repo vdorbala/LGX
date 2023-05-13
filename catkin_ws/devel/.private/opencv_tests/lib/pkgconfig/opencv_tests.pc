@@ -1,8 +1,0 @@
-prefix=/home/vdorbala/catkin_ws/devel/.private/opencv_tests
-
-Name: opencv_tests
-Description: Description of opencv_tests
-Version: 1.13.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

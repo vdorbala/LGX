@@ -1,1 +1,0 @@
-/home/vdorbala/catkin_ws/devel/.private/image_geometry/lib/pkgconfig/image_geometry.pc
