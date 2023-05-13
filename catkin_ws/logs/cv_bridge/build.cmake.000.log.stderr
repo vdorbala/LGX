@@ -1,0 +1,6 @@
+[33m[1mCMake Warning[0m at /usr/share/cmake-3.10/Modules/FindBoost.cmake:1626 (message):
+  No header defined for python3; skipping header check
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:11 (find_package)
+
+

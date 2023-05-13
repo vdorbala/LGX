@@ -1,0 +1,8 @@
+Symlinking /home/vdorbala/catkin_ws/devel/lib/libcv_bridge.so
+Symlinking /home/vdorbala/catkin_ws/devel/lib/pkgconfig/cv_bridge.pc
+Symlinking /home/vdorbala/catkin_ws/devel/lib/python3/dist-packages/cv_bridge/__init__.py
+Symlinking /home/vdorbala/catkin_ws/devel/lib/python3/dist-packages/cv_bridge/boost/cv_bridge_boost.so
+Symlinking /home/vdorbala/catkin_ws/devel/lib/python3/dist-packages/cv_bridge/boost/__init__.py
+Symlinking /home/vdorbala/catkin_ws/devel/share/cv_bridge/cmake/cv_bridge-extras.cmake
+Symlinking /home/vdorbala/catkin_ws/devel/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake
+Symlinking /home/vdorbala/catkin_ws/devel/share/cv_bridge/cmake/cv_bridgeConfig.cmake

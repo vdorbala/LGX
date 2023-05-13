@@ -1,0 +1,31 @@
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformActionFeedback
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_TF2Error
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_FrameGraph
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformResult
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformFeedback
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformActionGoal
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_TFMessage
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformAction
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformActionResult
+[  0%] Built target _tf2_msgs_generate_messages_check_deps_LookupTransformGoal
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
+[ 18%] Built target tf2_msgs_generate_messages_nodejs
+[ 37%] Built target tf2_msgs_generate_messages_lisp
+[ 58%] Built target tf2_msgs_generate_messages_eus
+[ 77%] Built target tf2_msgs_generate_messages_cpp
+[100%] Built target tf2_msgs_generate_messages_py
+[100%] Built target tf2_msgs_generate_messages

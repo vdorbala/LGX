@@ -1,0 +1,1 @@
+/home/vdorbala/catkin_ws/devel/.private/tf2_geometry_msgs/lib/pkgconfig/tf2_geometry_msgs.pc

@@ -1,0 +1,20 @@
+blacklist: []
+build_space: build
+catkin_make_args: []
+cmake_args:
+- -DPYTHON_EXECUTABLE=/scratch/miniconda3/envs/py38/bin/python
+- -DPYTHON_INCLUDE_DIR=/scratch/miniconda3/envs/py38/include/python3.8
+- -DPYTHON_LIBRARY=/scratch/miniconda3/envs/py38/lib/libpython3.8.so
+devel_layout: linked
+devel_space: devel
+extend_path: /opt/ros/melodic
+install: false
+install_space: install
+isolate_install: false
+jobs_args: []
+log_space: logs
+make_args: []
+source_space: src
+use_env_cache: false
+use_internal_make_jobserver: true
+whitelist: []

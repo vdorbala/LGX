@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/vdorbala/catkin_ws/devel/.private/opencv_tests/setup.sh

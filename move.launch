@@ -1,0 +1,86 @@
+<launch>
+
+  <arg name="pi/2" value="1.5707963267948966" />
+  <!-- Kinect cloud to laser scan -->
+  <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
+    <remap from="image"       to="/depth_image"/>
+    <remap from="camera_info" to="/camera_info"/>
+    <remap from="scan"        to="/front/scan"/>
+    <param name="range_max" type="double" value="20"/>
+    <param name="scan_height" value="100"/> 
+  </node>
+
+  <node pkg="nodelet" type="nodelet" args="manager" name="depth_transforms_manager" output="screen"/>
+
+   <!-- Convert to point cloud -->
+  <node pkg="nodelet" type="nodelet" name="cloudify"
+  args="load depth_image_proc/point_cloud_xyzrgb depth_transforms_manager --no-bond">
+
+      <!-- Input: Camera calibration and metadata.  (sensor_msgs/CameraInfo) -->
+      <remap from="rgb/camera_info"      to="/camera_info"/> 
+      <!-- Input: Rectified color image. (sensor_msgs/Image) -->
+      <remap from="rgb/image_rect_color" to="/rgb_image"/> 
+      <!-- Input: Rectified depth image, registered to the RGB camera. (sensor_msgs/Image) -->
+      <remap from="depth_registered/image_rect" to="/depth_image"/>        
+      <!-- Output: XYZ point cloud. If using PCL, subscribe as PointCloud<PointXYZ>.  (sensor_msgs/PointCloud2)  -->
+      <remap from="depth_registered/points" to="/pcl"/>
+
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_odom_tf" args="0 0 0 0 0 0 base_link camera_depth_frame 100" />
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_odom_tf" args="0 0 0 0 0 0 base_link camera_depth_frame 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_camera_tf" args="50 50 50 0 -$(arg pi/2) $(arg pi/2) base_link camera_link 100" /> -->
+
+
+  <!-- SLAM -->
+  <group ns="rtabmap">
+    <node name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args=" --delete_db_on_start">
+          
+          <param name="grid_size" type="double" value="20"/>
+          <param name="frame_id" type="string" value="base_link"/>
+
+          <param name="subscribe_depth" type="bool" value="true"/>
+          <param name="subscribe_scan" type="bool" value="true"/>
+          <!-- <param name="subscribe_scan_cloud" type="bool" value="true"/> -->
+
+          <remap from="odom" to="/thor_odom"/>
+          <remap from="scan" to="/front/scan"/>
+          <!-- <remap from="scan_cloud" to="/pcl"/> -->
+
+          <remap from="rgb/image"       to="/rgb_image"/>
+          <remap from="depth/image"     to="/depth_image"/>
+          <remap from="rgb/camera_info" to="/camera_info"/>
+
+          <param name="queue_size" type="int" value="10"/>
+
+          <param name="Grid/FromDepth"             type="bool" value="true"/>
+          <param name="Grid/MaxGroundHeight"       type="string" value="0.2"/>
+          <param name="Grid/MaxObstacleHeight"     type="string" value="3"/>
+          <param name="Grid/NormalsSegmentation"   type="string" value="false"/>
+
+          <!-- RTAB-Map's parameters -->
+          <param name="RGBD/ProximityBySpace"     type="string" value="false"/>
+          <param name="RGBD/AngularUpdate"        type="string" value="0.01"/>
+          <param name="RGBD/LinearUpdate"         type="string" value="0.01"/>
+          <param name="RGBD/OptimizeFromGraphEnd" type="string" value="false"/>
+          <param name="Reg/Force3DoF"             type="string" value="true"/>
+          <param name="Vis/MinInliers"            type="string" value="12"/>
+          <param name="Optimizer/Slam2D" value="true" />
+          <!-- <param name="cloud_noise_filtering_radius" value="0.01"/> -->
+          <!-- <param name="cloud_noise_filtering_min_neighbors" value="2"/> -->
+          <!-- <param name="RGBD/OptimizeMaxError" value="1"/> -->
+
+          <!-- <param name="Grid/MaxObstacleHeight" value="1.5"/> -->
+
+    </node>
+  </group>
+
+  <include file="$(find husky_navigation)/launch/move_base.launch">
+    <arg name="no_static_map" value="true"/>
+    <rosparam file="costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="costmap_common.yaml" command="load" ns="local_costmap" />
+  </include>
+
+
+</launch>
