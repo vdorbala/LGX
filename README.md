@@ -69,7 +69,7 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
 
  If everything runs successfully, you should see the results folder getting populated, and rviz showing the map and pointcloud similar to the image below.
 
- <img src="https://github.com/vdorbala/LGX/blob/master/images/example_costmap.png">
+ <img src="https://github.com/vdorbala/LGX/blob/master/images/example_costmap.jpg">
 
  ## Useful Commands, Tips & Debugging Info
 
@@ -79,7 +79,6 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
 - If you get CUDA Runtime errors, run `nvidia-smi`, and note the PID for the `python3` process(es). Then kill it using `sudo kill -9 PID`.
  - Ensuring the gridmap size is the same in `costmap_common.yaml` and Thor's `locobot controller` is very important. Right now it is set to `0.25`. If you change this value, make sure you change it in both places.
  - Check `rosparam get /move_base/NavfnROS/allow_unknown` is `False` to ensure the path planning takes place only inside the visible costmap, when target locking starts taking place. Also ensure `rosparam get /move_base/global_costmap/track_unknown_space` returns `True`.
- ---
  - If you face cuda toolkit sourcing errors, add the CUDA toolkit install location to .bashrc as follows- 
  `export CUDA_HOME="/cuda_install_path/cuda"`
  `export PATH=/cuda_install_path/cuda/bin:$PATH`
@@ -89,9 +88,9 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
  - If you get the Libtiff error, remove only that package from conda -`conda remove --force libtiff`
  - I've used [notify.run](https://notify.run/) for debugging at various points in the code (commented). You can try to set it up yourself incase you face issues.
  - Run `TMPDIR=<cache_dir> pip install --cache-dir=<cache_dir> pkg_name` if running low on space during pip install.
-***
 
-Please do cite our work if you found it useful:
+
+If you found our work useful, please do cite us!
 
 ```
 @article{dorbala2023can,
