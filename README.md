@@ -9,25 +9,24 @@ This repo contains code for our paper -
 <img src="https://github.com/vdorbala/LGX/blob/master/images/overview.jpg">
 
 ## Abstract
-*We present LGX, a novel algorithm for Object
-Goal Navigation in a “language-driven, zero-shot manner”,
-where an embodied agent navigates to an arbitrarily described
-target object in a previously unexplored environment. <br> 
-Our approach leverages the capabilities of Large Language Models
-(LLMs) for making navigational decisions by mapping the
-LLMs implicit knowledge about the semantic context of the
-environment into sequential inputs for robot motion planning.
-Simultaneously, we also conduct generalized target object detection 
-using a pre-trained Vision-Language grounding model. <br>
+*We present LGX (Language-guided Exploration),
+a novel algorithm for Language-Driven Zero-Shot Object Goal
+Navigation (L-ZSON), where an embodied agent navigates to
+an uniquely described target object in a previously unseen envi-
+ronment. Our approach makes use of Large Language Models
+(LLMs) for this task by leveraging the LLM’s commonsense-
+reasoning capabilities for making sequential navigational deci-
+sions. Simultaneously, we perform generalized target object de-
+tection using a pre-trained Vision-Language grounding model.
 We achieve state-of-the-art zero-shot object navigation results
 on RoboTHOR with a success rate (SR) improvement of over
 27% over the current baseline of the OWL-ViT CLIP on Wheels
 (OWL CoW). Furthermore, we study the usage of LLMs for
-robot navigation and present an analysis of the various semantic
-factors affecting model output. <br> Finally, we showcase the benefits
-of our approach via real-world experiments that indicate the
-superior performance of LGX when navigating to and detecting
-visually unique objects.*
+robot navigation and present an analysis of various prompting
+strategies affecting the model output. Finally, we showcase
+the benefits of our approach via real-world experiments that
+indicate the superior performance of LGX in detecting and
+navigating to visually unique objects.*
 
 ### Prerequisites
 
@@ -62,7 +61,7 @@ To run LGX, we use ROS melodic with python 3.8. This requires you to first need 
 
  1. Run `roscore`, and keep it running on a separate terminal.
  2. Activate the conda environment using `conda activate LGX`.
- 3. Run  `roslaunch move.launch`, followed by `python3 lgx-run.py`. 
+ 3. Run `roslaunch move.launch`, followed by `python3 lgx-run.py` in conda terminals. 
  4. (Optional) Open rviz, and load the `lgx.rviz` config file provided for visualization. Or run `rviz -d lgx.rviz`.
  5. Once the experiment is done, you can get statistics and results using `compute_results.py`.
 
